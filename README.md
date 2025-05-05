@@ -11,9 +11,11 @@ This repository contains the full pipeline for a research project on adapting NE
 | `country/` | Country-specific datasets and predictions. Includes manual annotations and pseudo-labeled data. |
 | `rap-hip-hop/` | Hip-hop-specific datasets and predictions. Includes manual annotations and pseudo-labeled data. |
 | `datasets_original/` | English Web Treebank (EWT) data used for initial baseline and DAPT pretraining. |
-| `model_trainings_predictions_statistics.ipynb` | Main notebook containing model training code, pseudo-label generation, continuous learning, predictions, and error analysis. |
-| `requirements.txt` | file containing all necessary libraries to run your NER training and evaluation code (model_trainings_predictions_statistics.ipynb)
+| `main_code.ipynb` | Main notebook containing model training code, pseudo-label generation, continuous learning, predictions, and error analysis. |
+| `requirements.txt` | File containing all necessary libraries to run your NER training and evaluation code (model_trainings_predictions_statistics.ipynb)
+| `detailed_results.pdf`| Combined results of all models. |
 | `README.md` | This file. Full explanation of project goals, structure, and usage. |
+
 
 
 ##  Setup Instructions
