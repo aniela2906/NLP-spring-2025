@@ -37,7 +37,7 @@ Use the provided requirements.txt file:
 pip install -r requirements.txt
 ```
 
-##  How to run: `model_trainings_predictions_statistics.ipynb`
+##  How to run: `main_code.ipynb`
 
 Open the notebook and follow the code blocks in order. The notebook is structured in the following steps:
 
