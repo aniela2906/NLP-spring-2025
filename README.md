@@ -41,7 +41,7 @@ pip install -r requirements.txt
 ## Baseline code: 
 
 It is included in the first cell in the `main_code.ipynb`. 
-Also its prediction on 'lyrics_test.iob2'is saved to : 
+Also its prediction on `lyrics_test.iob2` is saved to : 
 ```bash
 /baseline/baseline_predictions.iob2.  
 ```
@@ -59,6 +59,8 @@ NLP-spring-2025/
 ├── datasets_orginal/  
 │   ├── span_f1.py  
 │   └── en_ewt-ud-test-masked.iob2  
+├──test
+│    └──lyrics_test.iob2
     
 You should see the following evaluation results on the English Web Treebank (EWT) test set:   
     
