@@ -38,6 +38,18 @@ Use the provided requirements.txt file:
 ```bash
 pip install -r requirements.txt
 ```
+## Baseline code: 
+
+It is included in the first cell in the `main_code.ipynb`. 
+In the detailed_results.pdf it is reffered as EWT (basic).  
+
+## DAPT model :
+ 1. Make sure you already installed all requirements.  
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+2. 
 
 ##  How to run: `main_code.ipynb`
 
