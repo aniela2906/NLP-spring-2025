@@ -40,9 +40,9 @@ Use the provided requirements.txt file:
 ```bash
 pip install -r requirements.txt
 ```
-## Baseline code: 
+## Baseline model: 
 
-It is included in the first cell in the `main_code.ipynb`. 
+The code is included in the first cell in the `main_code.ipynb`. 
 Also its prediction on `lyrics_test.iob2` is saved to : 
 ```bash
 /baseline/baseline_predictions.iob2.  
@@ -111,7 +111,11 @@ loose (partial overlap with same label)
 l_recall:    0.8639705882352942  
 l_precision: 0.8807511737089202  
 l_slot-f1:   0.8722801838503713  
-    
+
+Also its prediction on `lyrics_test.iob2` is saved to : 
+```bash
+/ner_DAPT_model/predictions_ner_DAPT_model_lyrics.iob2.  
+```
 
 ##  How to run: `main_code.ipynb`
 
