@@ -44,14 +44,26 @@ It is included in the first cell in the `main_code.ipynb`.
 In the detailed_results.pdf it is reffered as EWT (basic).  
 
 ## DAPT model :
- 1. Make sure you already installed all requirements.  
+ 1. Install dependencies (if not yet):
   ```bash
-  pip install -r requirements.txt
+  pip install transformers datasets
   ```
 
-2. 
+2. File with all lyrics is saved in /ner_DAPT_model/all_lyrics.txt
+
+3. To get `run_mlm.py` for MLM pretraining, you'll need to clone the Hugging Face Transformers repository from GitHub.
+
+in terminal clone the repo:
+ ```bash
+  git clone https://github.com/huggingface/transformers.git
+cd transformers
+  ```
+
+4. After cloning, the script is located in transformers/examples/pytorch/language-modeling/run_mlm.py
+
 
 ##  How to run: `main_code.ipynb`
+
 
 Open the notebook and follow the code blocks in order. The notebook is structured in the following steps:
 
