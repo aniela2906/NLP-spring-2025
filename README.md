@@ -16,7 +16,7 @@ This repository contains the full pipeline for a research project on adapting NE
 | `test/`| Contains the lyrics test set with and without labels. |
 | `detailed_results.pdf`| Combined results of all models. |
 | `main_code.ipynb` | Main notebook containing model training code, pseudo-label generation, continuous learning, predictions, and error analysis. |
-| `README.md` | This file. Full explanation of project goals, structure, and usage. |
+| `README.md` | This file. Full explanation of repository structure, and usage. |
 | `requirements.txt` | File containing all necessary libraries to run your NER training and evaluation code. | 
 
 
@@ -40,7 +40,7 @@ Use the provided requirements.txt file:
 ```bash
 pip install -r requirements.txt
 ```
-## Baseline model: 
+## Initial Baseline Model (trained and tested on EWT data): 
 
 The code is included in the first cell in the `main_code.ipynb`. 
 Also its prediction on `lyrics_test.iob2` is saved to : 
@@ -69,9 +69,7 @@ You should see the following evaluation results on the **English Web Treebank (E
 recall:     0.8591160220994475    
 precision:  0.8536139066788655    
 slot-f1:    0.8563561266636073    
-
-
-In the detailed_results.pdf it is reffered as **EWT (basic)**.  
+ 
 
 
 ## DAPT model :
@@ -149,7 +147,7 @@ These paths are placeholders. You should replace them with the actual locations.
 - Use the fine-tuned model to predict labels on additional unlabeled lyrics.
 - This creates pseudo-labeled training data for self-training (continual learning).
 
-### 3. Continual Learning
+### 3. Continuous Learning
 - Fine-tune again using both manual and pseudo-labeled data.
 - This step improves generalization and robustness for lyrics-based NER.
 
