@@ -7,15 +7,17 @@ This repository contains the full pipeline for a research project on adapting NE
 | Path | Description |
 |------|-------------|
 | `3genres/` | Contains merged datasets and predictions for the 3-genre model (pop, country, rap/hip-hop). Used in fine-tuning and continual learning. |
-| `pop/` | Pop-specific datasets and predictions. Includes manual annotations and pseudo-labeled data. |
+| `baseline/` | Contains baseline prediction on EWT, and baseline prediction on `lyrics_test.iob2`.  |
 | `country/` | Country-specific datasets and predictions. Includes manual annotations and pseudo-labeled data. |
-| `rap-hip-hop/` | Hip-hop-specific datasets and predictions. Includes manual annotations and pseudo-labeled data. |
 | `datasets_original/` | English Web Treebank (EWT) data used for initial baseline and DAPT pretraining. |
-| `main_code.ipynb` | Main notebook containing model training code, pseudo-label generation, continuous learning, predictions, and error analysis. |
-| `requirements.txt` | File containing all necessary libraries to run your NER training and evaluation code (model_trainings_predictions_statistics.ipynb)
+| `ner_DAPT_model/` | Contains baseline prediction on EWT, and baseline prediction on `lyrics_test.iob2`. |
+| `pop/` | Pop-specific datasets and predictions. Includes manual annotations and pseudo-labeled data. |
+| `rap-hip-hop/` | Hip-hop-specific datasets and predictions. Includes manual annotations and pseudo-labeled data. |
+| `test/`| Contains the lyrics test set with and without labels. |
 | `detailed_results.pdf`| Combined results of all models. |
+| `main_code.ipynb` | Main notebook containing model training code, pseudo-label generation, continuous learning, predictions, and error analysis. |
 | `README.md` | This file. Full explanation of project goals, structure, and usage. |
-
+| `requirements.txt` | File containing all necessary libraries to run your NER training and evaluation code. | 
 
 
 ##  Setup Instructions
