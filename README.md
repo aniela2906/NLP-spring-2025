@@ -59,17 +59,17 @@ NLP-spring-2025/
 ├── datasets_orginal/  
 │   ├── span_f1.py  
 │   └── en_ewt-ud-test-masked.iob2  
-├──test
+├──test  
 │    └──lyrics_test.iob2
     
-You should see the following evaluation results on the English Web Treebank (EWT) test set:   
+You should see the following evaluation results on the **English Web Treebank (EWT) test set**:   
     
 recall:     0.8591160220994475    
 precision:  0.8536139066788655    
 slot-f1:    0.8563561266636073    
 
 
-In the detailed_results.pdf it is reffered as EWT (basic).  
+In the detailed_results.pdf it is reffered as **EWT (basic)**.  
 
 
 ## DAPT model :
