@@ -92,6 +92,26 @@ cd transformers
 
 4. After cloning, the script is located in transformers/examples/pytorch/language-modeling/run_mlm.py
 
+### RESULTS DAPT MODEL:
+1. Results on EWT test data:
+     
+ ```bash
+ python span_f1.py en_ewt-ud-test-unmasked.iob2 ../ner_DAPT_model/predictions_ner_DAPT_model_ewt.iob2
+  ```
+recall:    0.8492647058823529  
+precision: 0.8676056338028169  
+slot-f1:   0.8583372039015327  
+  
+unlabeled  
+ul_recall:    0.8943014705882353  
+ul_precision: 0.9136150234741784  
+ul_slot-f1:   0.903855085926614  
+  
+loose (partial overlap with same label)  
+l_recall:    0.8639705882352942  
+l_precision: 0.8807511737089202  
+l_slot-f1:   0.8722801838503713  
+    
 
 ##  How to run: `main_code.ipynb`
 
