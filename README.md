@@ -47,19 +47,20 @@ After:
 ```bash
 python span_f1.py en_ewt-ud-test-masked.iob2 ../baseline/baseline_predictions.iob2
 ```
-Assuming you downladed the repository : 
-NLP-spring-2025/
-├── baseline/
-│   └── baseline_predictions.iob2
-├── datasets_orginal/
-│   ├── span_f1.py
-│   └── en_ewt-ud-test-masked.iob2
-
-Results on EWT:
-
-recall:     0.8591160220994475
-precision:  0.8536139066788655
-slot-f1:    0.8563561266636073
+  
+Assuming you downladed the repository :   
+NLP-spring-2025/    
+├── baseline/  
+│   └── baseline_predictions.iob2  
+├── datasets_orginal/  
+│   ├── span_f1.py  
+│   └── en_ewt-ud-test-masked.iob2  
+  
+Results on EWT:  
+  
+recall:     0.8591160220994475  
+precision:  0.8536139066788655  
+slot-f1:    0.8563561266636073  
 
 
 In the detailed_results.pdf it is reffered as EWT (basic).  
