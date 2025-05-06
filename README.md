@@ -41,22 +41,26 @@ pip install -r requirements.txt
 ## Baseline code: 
 
 It is included in the first cell in the `main_code.ipynb`. 
-Also its prediction is saved to /baseline/baseline_predictions.iob2.  
+Also its prediction on 'lyrics_test.iob2'is saved to : 
+```bash
+/baseline/baseline_predictions.iob2.  
+```
+To evaluate the baseline on the EWT dataset, run the following command from the datasets_orginal/ directory:
 
-After:
 ```bash
 python span_f1.py en_ewt-ud-test-masked.iob2 ../baseline/baseline_predictions.iob2
 ```
   
-Assuming you downladed the repository :   
-NLP-spring-2025/    
-├── baseline/  
-│   └── baseline_predictions.iob2  
-├── datasets_orginal/  
-│   ├── span_f1.py  
-│   └── en_ewt-ud-test-masked.iob2  
+Assuming you downloaded and organized the repository as follows:
+
+NLP-spring-2025/
+├── baseline/
+│   └── baseline_predictions.iob2
+├── datasets_orginal/
+│   ├── span_f1.py
+│   └── en_ewt-ud-test-masked.iob2
   
-Results on EWT:  
+You should see the following evaluation results on the English Web Treebank (EWT) test set: 
   
 recall:     0.8591160220994475  
 precision:  0.8536139066788655  
