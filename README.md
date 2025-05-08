@@ -7,7 +7,7 @@ This repository contains the full pipeline for a research project on adapting NE
 | Path | Description |
 |------|-------------|
 | `3genres/` | Contains merged datasets and predictions for the 3-genre model (pop, country, rap/hip-hop). Used in fine-tuning and continual learning. |
-| `baseline/` | Contains baseline prediction on EWT, and baseline prediction on `lyrics_test.iob2`.  |
+| `baseline/` | !!!! NIE MA PLIKOW !!!Contains baseline prediction on EWT, and baseline prediction on `lyrics_test.iob2`.  |
 | `country/` | Country-specific datasets and predictions. Includes manual annotations and pseudo-labeled data. |
 | `datasets_original/` | English Web Treebank (EWT) data used for initial baseline and DAPT pretraining. |
 | `ner_DAPT_model/` | Contains baseline prediction on EWT, and baseline prediction on `lyrics_test.iob2`. |
