@@ -40,31 +40,15 @@ Use the provided requirements.txt file:
 ```bash
 pip install -r requirements.txt
 ```
-## Initial Baseline Model (trained and tested on EWT data): 
+## Initial Baseline Model : 
 
 The code is included in the first cell in the `main_code.ipynb`. 
-Also its prediction on `lyrics_test.iob2` is saved to : 
+The prediction on `lyrics_test.iob2` is saved to : 
 ```bash
 /baseline/baseline_predictions.iob2.  
 ```
-To evaluate the baseline on the EWT dataset, run the following command from the datasets_orginal/ directory:  
-
-```bash
-python span_f1.py en_ewt-ud-test-masked.iob2 ../baseline/baseline_predictions.iob2  
-```
-  
-Assuming you downloaded and organized the repository as follows:  
-
-NLP-spring-2025/  
-├── baseline/  
-│   └── baseline_predictions.iob2  
-├── datasets_orginal/  
-│   ├── span_f1.py  
-│   └── en_ewt-ud-test-masked.iob2  
-├──test  
-│    └──lyrics_test.iob2
     
-You should see the following evaluation results on the **English Web Treebank (EWT) test set**:   
+Evaluation results on the **English Web Treebank (EWT) test set**:   
     
 recall:     0.8591160220994475    
 precision:  0.8536139066788655    
@@ -108,7 +92,11 @@ python examples/pytorch/language-modeling/run_mlm.py \
     --line_by_line True
  ```
 
-
+The prediction on `lyrics_test.iob2` is saved to : 
+```bash
+/ner_DAPT_model/predictions_ner_DAPT_model_lyrics.iob2.  
+```
+    
    
 ### RESULTS DAPT MODEL:
 1. Results on EWT test data:
