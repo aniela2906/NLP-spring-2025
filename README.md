@@ -72,24 +72,44 @@ slot-f1:    0.8563561266636073
  
 
 
-## DAPT model :
- 1. Install dependencies (if not yet):
+## How to get DAPT model :
+ 1. Install repository:
   ```bash
-  pip install transformers datasets
-  ```
-
-2. File with all lyrics is saved in /ner_DAPT_model/all_lyrics.txt
-
-3. To get `run_mlm.py` for MLM pretraining, you'll need to clone the Hugging Face Transformers repository from GitHub.
-
-in terminal clone the repo:
- ```bash
   git clone https://github.com/huggingface/transformers.git
-cd transformers
   ```
+  
+2. Navigate to tranformers:
+ ```bash
+ cd transformers
+ ```
+  
+3. Install requirements:
+```bash
+ pip install -r examples/pytorch/language-modeling/requirements.txt
+  ```
+  
+4. Install editable mode:
+ ```bash
+   pip install -e 
+  ```
+5.Run run_mlm.py:
+```bash
+python examples/pytorch/language-modeling/run_mlm.py \
+    --model_name_or_path deepset/roberta-base-squad2 \
+    --train_file /PATH TO LYRICS DATASET /all_lyrics.txt \
+    --do_train \
+    --output_dir /PATH TO SAVE THE MODEL/ner_DAPT_model \
+    --num_train_epochs 3 \
+    --per_device_train_batch_size 128 \
+    --learning_rate 5e-5 \
+    --logging_steps 100 \
+    --save_steps 500 \
+    --max_seq_length 128 \
+    --line_by_line True
+ ```
 
-4. After cloning, the script is located in transformers/examples/pytorch/language-modeling/run_mlm.py
 
+   
 ### RESULTS DAPT MODEL:
 1. Results on EWT test data:
      
