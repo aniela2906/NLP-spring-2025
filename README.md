@@ -7,7 +7,7 @@ This repository contains the full pipeline for a research project on adapting NE
 | Path | Description |
 |------|-------------|
 | `3genres/` | Contains merged datasets and predictions for the 3-genre model (pop, country, rap/hip-hop). Used in fine-tuning and continual learning. |
-| `baseline/` | !!!! NIE MA PLIKOW !!!Contains baseline prediction on EWT, and baseline prediction on `lyrics_test.iob2`.  |
+| `baseline/` |⚠️ *Currently empty.* Contains baseline prediction on EWT, and baseline prediction on `lyrics_test.iob2`.  |
 | `country/` | Country-specific datasets, predictions(/country/predictions/), and orgnial songs & lyrics (/country/songs+orgnial_lyrics). Includes also manual annotations (/country/datasets/manual/) and pseudo-labeled data (/country/datasets/ country_labeled_no_2000). |
 | `datasets_original/` | English Web Treebank (EWT) data used for initial baseline and DAPT pretraining. |
 | `ner_DAPT_model/` | Contains baseline prediction on EWT, and baseline prediction on `lyrics_test.iob2`. |
@@ -15,8 +15,8 @@ This repository contains the full pipeline for a research project on adapting NE
 | `rap-hip-hop/` | Hip-hop-specific datasets, predictions(/rap-hip-hop/predictions/), and orgnial songs & lyrics (/rap-hip-hop/songs+orgnial_lyrics). Includes also manual annotations (/rap-hip-hop/datasets/manual/) and pseudo-labeled data (/rap-hip-hop/datasets/ rap-hip-hop_labeled_no_2000). |
 | `test/`| Contains the lyrics test set with and without labels. |
 | `detailed_results.pdf`| Combined results of all models. |
-| `main_code.ipynb` | Main notebook containing model training code, pseudo-label generation, continuous learning, predictions, and error analysis. |
-| `README.md` | This file. Full explanation of repository structure, and usage. |
+| `main_code.ipynb` | Main notebook containing baseline model, model training code, pseudo-label generation, continuous learning, predictions, and error analysis. |
+| `README.md` | This file. Describes the full repository structure, usage guide, setup instructions, and steps for running the baseline and DAPT models.|
 | `requirements.txt` | File containing all necessary libraries to run your NER training and evaluation code. | 
 
 
