@@ -7,16 +7,16 @@ This repository contains the full pipeline for a research project on adapting NE
 | Path | Description |
 |------|-------------|
 | `3genres/` | Contains merged datasets and predictions for the 3-genre model (pop, country, rap/hip-hop). Used in fine-tuning and continual learning. |
-| `baseline/` | Contains baseline prediction on EWT, and baseline prediction on `lyrics_test.iob2`.  |
-| `country/` | Country-specific datasets and predictions. Includes manual annotations and pseudo-labeled data. |
+| `baseline/` |⚠️ *Currently empty.* Contains baseline prediction on EWT, and baseline prediction on `lyrics_test.iob2`.  |
+| `country/` | Country-specific datasets, predictions(/country/predictions/), and orgnial songs & lyrics (/country/songs+orgnial_lyrics). Includes also manual annotations (/country/datasets/manual/) and pseudo-labeled data (/country/datasets/ country_labeled_no_2000). |
 | `datasets_original/` | English Web Treebank (EWT) data used for initial baseline and DAPT pretraining. |
 | `ner_DAPT_model/` | Contains baseline prediction on EWT, and baseline prediction on `lyrics_test.iob2`. |
-| `pop/` | Pop-specific datasets and predictions. Includes manual annotations and pseudo-labeled data. |
-| `rap-hip-hop/` | Hip-hop-specific datasets and predictions. Includes manual annotations and pseudo-labeled data. |
+| `pop/` | Pop-specific datasets, predictions(/pop/predictions/), and orgnial songs & lyrics (/pop/songs+orgnial_lyrics). Includes also manual annotations (/pop/datasets/manual/) and pseudo-labeled data (/pop/datasets/ pop_labeled_no_2000). |
+| `rap-hip-hop/` | Hip-hop-specific datasets, predictions(/rap-hip-hop/predictions/), and orgnial songs & lyrics (/rap-hip-hop/songs+orgnial_lyrics). Includes also manual annotations (/rap-hip-hop/datasets/manual/) and pseudo-labeled data (/rap-hip-hop/datasets/ rap-hip-hop_labeled_no_2000). |
 | `test/`| Contains the lyrics test set with and without labels. |
 | `detailed_results.pdf`| Combined results of all models. |
-| `main_code.ipynb` | Main notebook containing model training code, pseudo-label generation, continuous learning, predictions, and error analysis. |
-| `README.md` | This file. Full explanation of repository structure, and usage. |
+| `main_code.ipynb` | Main notebook containing baseline model, model training code, pseudo-label generation, continuous learning, predictions, and error analysis. |
+| `README.md` | This file. Describes the full repository structure, usage guide, setup instructions, and steps for running the baseline and DAPT models.|
 | `requirements.txt` | File containing all necessary libraries to run your NER training and evaluation code. | 
 
 
@@ -40,31 +40,15 @@ Use the provided requirements.txt file:
 ```bash
 pip install -r requirements.txt
 ```
-## Initial Baseline Model (trained and tested on EWT data): 
+## Initial Baseline Model : 
 
 The code is included in the first cell in the `main_code.ipynb`. 
-Also its prediction on `lyrics_test.iob2` is saved to : 
+The prediction on `lyrics_test.iob2` is saved to : 
 ```bash
 /baseline/baseline_predictions.iob2.  
 ```
-To evaluate the baseline on the EWT dataset, run the following command from the datasets_orginal/ directory:  
-
-```bash
-python span_f1.py en_ewt-ud-test-masked.iob2 ../baseline/baseline_predictions.iob2  
-```
-  
-Assuming you downloaded and organized the repository as follows:  
-
-NLP-spring-2025/  
-├── baseline/  
-│   └── baseline_predictions.iob2  
-├── datasets_orginal/  
-│   ├── span_f1.py  
-│   └── en_ewt-ud-test-masked.iob2  
-├──test  
-│    └──lyrics_test.iob2
     
-You should see the following evaluation results on the **English Web Treebank (EWT) test set**:   
+Evaluation results on the **English Web Treebank (EWT) test set**:   
     
 recall:     0.8591160220994475    
 precision:  0.8536139066788655    
@@ -72,24 +56,48 @@ slot-f1:    0.8563561266636073
  
 
 
-## DAPT model :
- 1. Install dependencies (if not yet):
+## How to get DAPT model :
+ 1. Install repository:
   ```bash
-  pip install transformers datasets
-  ```
-
-2. File with all lyrics is saved in /ner_DAPT_model/all_lyrics.txt
-
-3. To get `run_mlm.py` for MLM pretraining, you'll need to clone the Hugging Face Transformers repository from GitHub.
-
-in terminal clone the repo:
- ```bash
   git clone https://github.com/huggingface/transformers.git
-cd transformers
   ```
+  
+2. Navigate to tranformers:
+ ```bash
+ cd transformers
+ ```
+  
+3. Install requirements:
+```bash
+ pip install -r examples/pytorch/language-modeling/requirements.txt
+  ```
+  
+4. Install editable mode:
+ ```bash
+   pip install -e 
+  ```
+5.Run run_mlm.py:
+```bash
+python examples/pytorch/language-modeling/run_mlm.py \
+    --model_name_or_path deepset/roberta-base-squad2 \
+    --train_file /PATH TO LYRICS DATASET /all_lyrics.txt \
+    --do_train \
+    --output_dir /PATH TO SAVE THE MODEL/ner_DAPT_model \
+    --num_train_epochs 3 \
+    --per_device_train_batch_size 128 \
+    --learning_rate 5e-5 \
+    --logging_steps 100 \
+    --save_steps 500 \
+    --max_seq_length 128 \
+    --line_by_line True
+ ```
 
-4. After cloning, the script is located in transformers/examples/pytorch/language-modeling/run_mlm.py
-
+The prediction on `lyrics_test.iob2` is saved to : 
+```bash
+/ner_DAPT_model/predictions_ner_DAPT_model_lyrics.iob2.  
+```
+    
+   
 ### RESULTS DAPT MODEL:
 1. Results on EWT test data:
      
