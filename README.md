@@ -8,11 +8,11 @@ This repository contains the full pipeline for a research project on adapting NE
 |------|-------------|
 | `3genres/` | Contains merged datasets and predictions for the 3-genre model (pop, country, rap/hip-hop). Used in fine-tuning and continual learning. |
 | `baseline/` | !!!! NIE MA PLIKOW !!!Contains baseline prediction on EWT, and baseline prediction on `lyrics_test.iob2`.  |
-| `country/` | Country-specific datasets, predictions, and orgnial songs & lyrics (/country/songs+orgnial_lyrics). Includes also manual annotations (/country/datasets/manual/) and pseudo-labeled data (/country/datasets/ country_labeled_no_2000). |
+| `country/` | Country-specific datasets, predictions(/country/predictions/), and orgnial songs & lyrics (/country/songs+orgnial_lyrics). Includes also manual annotations (/country/datasets/manual/) and pseudo-labeled data (/country/datasets/ country_labeled_no_2000). |
 | `datasets_original/` | English Web Treebank (EWT) data used for initial baseline and DAPT pretraining. |
 | `ner_DAPT_model/` | Contains baseline prediction on EWT, and baseline prediction on `lyrics_test.iob2`. |
-| `pop/` | Pop-specific datasets, predictions, and orgnial songs & lyrics (/pop/songs+orgnial_lyrics). Includes also manual annotations (/pop/datasets/manual/) and pseudo-labeled data (/pop/datasets/ pop_labeled_no_2000). |
-| `rap-hip-hop/` | Hip-hop-specific datasets, predictions, and orgnial songs & lyrics (/rap-hip-hop/songs+orgnial_lyrics). Includes also manual annotations (/rap-hip-hop/datasets/manual/) and pseudo-labeled data (/rap-hip-hop/datasets/ rap-hip-hop_labeled_no_2000). |
+| `pop/` | Pop-specific datasets, predictions(/pop/predictions/), and orgnial songs & lyrics (/pop/songs+orgnial_lyrics). Includes also manual annotations (/pop/datasets/manual/) and pseudo-labeled data (/pop/datasets/ pop_labeled_no_2000). |
+| `rap-hip-hop/` | Hip-hop-specific datasets, predictions(/rap-hip-hop/predictions/), and orgnial songs & lyrics (/rap-hip-hop/songs+orgnial_lyrics). Includes also manual annotations (/rap-hip-hop/datasets/manual/) and pseudo-labeled data (/rap-hip-hop/datasets/ rap-hip-hop_labeled_no_2000). |
 | `test/`| Contains the lyrics test set with and without labels. |
 | `detailed_results.pdf`| Combined results of all models. |
 | `main_code.ipynb` | Main notebook containing model training code, pseudo-label generation, continuous learning, predictions, and error analysis. |
