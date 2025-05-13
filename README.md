@@ -17,6 +17,7 @@ This repository contains the full pipeline for a research project on adapting NE
 | `detailed_results.pdf`| Combined results of all models. |
 | `main_code.ipynb` | Main notebook containing baseline model, model training code, pseudo-label generation, continuous learning, predictions, and error analysis. |
 | `README.md` | This file. Describes the full repository structure, usage guide, setup instructions, and steps for running the baseline and DAPT models.|
+| `raport.pdf` | Project raport.|
 | `requirements.txt` | File containing all necessary libraries to run your NER training and evaluation code. | 
 
 
