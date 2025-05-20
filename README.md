@@ -53,7 +53,7 @@ Evaluation results on the **English Web Treebank (EWT) test set**:
     
 recall:     0.8591160220994475    
 precision:  0.8536139066788655    
-slot-f1:    0.8563561266636073    
+span-f1:    0.8563561266636073    
  
 
 
@@ -107,17 +107,17 @@ The prediction on `lyrics_test.iob2` is saved to :
   ```
 recall:    0.8492647058823529  
 precision: 0.8676056338028169  
-slot-f1:   0.8583372039015327  
+span-f1:   0.8583372039015327  
   
 unlabeled  
 ul_recall:    0.8943014705882353  
 ul_precision: 0.9136150234741784  
-ul_slot-f1:   0.903855085926614  
+ul_span-f1:   0.903855085926614  
   
 loose (partial overlap with same label)  
 l_recall:    0.8639705882352942  
 l_precision: 0.8807511737089202  
-l_slot-f1:   0.8722801838503713  
+l_span-f1:   0.8722801838503713  
 
 Also its prediction on `lyrics_test.iob2` is saved to : 
 ```bash
